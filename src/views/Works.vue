@@ -15,7 +15,12 @@
           <p>口琴主旋律 · 库乐队编曲</p>
           <audio controls src="/audio/永不失联的爱.mp3"></audio>
         </div>
-        
+        <div class="card">
+          <div class="icon">🎵</div>
+          <h3>夜未眠</h3>
+          <p>钢琴主旋律 · 库乐队编曲</p>
+          <audio controls src="/audio/夜未眠.mp3"></audio>
+        </div>
       </div>
     </section>
 </template>
