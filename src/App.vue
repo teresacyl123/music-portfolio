@@ -4,27 +4,60 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+   <nav class="navbar">
+      <div class="nav-inner">
+        <span class="logo">🎼 风里的口琴</span>
+        <div class="nav-links">
+          <router-link to="/">首页</router-link>
+          <router-link to="/works">作品</router-link>
+          <router-link to="/about">关于</router-link>
+          <router-link to="/contact">联系</router-link>
+          
+        </div>
+        <router-view/>
+      </div>
+    </nav>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
+ 
 
+/* ① 导航栏 */
+.navbar {
+  width: 100vw;
+  background: #0f0f1e;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  max-width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  text-align: center;
+}
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  color: #7c5cbf;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.nav-links {
+  width: 100%; 
+}
+.nav-links a {
+  color: #ccc;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 0.95rem; 
+  display: inline-block;
+  width: 12%;
+}
+.nav-links a:hover {
+  color: #7c5cbf;
 }
 
 @media (min-width: 1024px) {
